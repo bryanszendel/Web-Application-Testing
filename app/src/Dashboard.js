@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { strikeCounter, ballCounter } from "./helpers";
+import Display from './Display'
 
 // balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls.
 // balls and strikes reset to 0 when a `hit` is recorded.
@@ -16,6 +17,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Display balls={balls} strikes={strikes}/>
       <button onClick={() => setStrikes(strikeCounter(strikes))}>Add Strike</button>
       <button onClick={() => setBalls(ballCounter(balls))}>Add Ball</button>
       {console.log(strikes, balls)}
