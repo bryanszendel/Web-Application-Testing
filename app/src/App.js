@@ -9,10 +9,15 @@ function App() {
   const [strikes, setStrikes] = useState(0)
   const [balls, setBalls] = useState(0)
 
+  const hit = () => {
+    setStrikes(0)
+    setBalls(0)
+  };
+
   return (
     <div className="App">
       <Display balls={balls} strikes={strikes}/>
-      <Dashboard balls={balls} strikes={strikes} setBalls={setBalls} setStrikes={setStrikes}/>
+      <Dashboard hit={hit} balls={balls} strikes={strikes} setBalls={setBalls} setStrikes={setStrikes}/>
     </div>
   );
 }

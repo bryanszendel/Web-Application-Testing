@@ -9,9 +9,6 @@ export const ballCounter = (ballState) => {
   else return ballState + 1;
 }
 
-// export const function3 = () => {
-
-// }
 
 
 
